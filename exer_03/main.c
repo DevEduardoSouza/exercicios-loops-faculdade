@@ -1,0 +1,46 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  float peso, altura, imc;
+  char nome[30], sexo;
+
+  for(int i=1; i<=20; i++){
+    // Recolher dados dos funcionarios
+  
+    printf("\nNome  do funcionario\n");
+    scanf (" %256[^\n]", nome);
+    printf("\nSexo do funcionaro(m, M ou f, F)\n");
+    scanf(" %c",&sexo);
+    printf("\nPeso do funcionario (em KG)\n");
+    scanf(" %f",&peso);
+    printf("\nAltura do funcionario (metros)\n"); 
+    scanf(" %f",&altura);
+
+    //Informar o IMC(Indice de Massa Corporal) de cada funcionario
+
+    imc = peso/(altura * altura);
+    printf("\nO indice de massa corporal de %s e: %.2f",nome,imc);
+
+    //Percentual de funcionarios obesos
+    if(imc >= 30){
+      printf(" Funcionario obeso");
+    }
+    //Percentual de funcionarios peso normal masculinos e femininos
+    if(sexo == 'm'||sexo== 'M'){
+      if(imc<=25){
+        printf("\npeso normal");
+      }
+    }
+    if(sexo == 'f'||sexo == 'F'){
+      if(imc<=27){
+        printf("\npeso normal");
+        
+      }
+    }
+    
+  }
+  
+  return 0;
+}
