@@ -5,7 +5,7 @@
 int main(){
 
 int c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,vn=0,vnv=0,totalVotosP=0,totalVotosV=0,vp=7,vv=7;
-float porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4;
+float porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4,porVereador1,porVereador2,porVereador3,porVereador4;
 char cr;
 
     printf("-------Inicie as Votacoes-------");
@@ -100,7 +100,27 @@ printf("\n APURACAO DE VOTOS PARA PREFEITO\nQuantidade de votos para Fulano: %i\
   
 printf("\n APURACAO DE VOTOS PARA VEREADOR\nQuantidade de votos para Megano: %i\nQuantidade de votos para Citano: %i\nQuantidade de votos para Zutano: %i\nVotos nulos: %i\n",c4,c5,c6,vnv);
 
-//Imprimir o vencedor para prefeito
+  //
+   totalVotosP = c1 + c2 + c3 +vn;
+   porPrefeito1 = (100 * c1 ) / totalVotosP;
+   porPrefeito2 = (100 * c2 ) / totalVotosP;
+   porPrefeito3 = (100 * c3 ) / totalVotosP;
+   porPrefeito4 = (100 * vn ) / totalVotosP;
+
+   printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA PREFEITO---------\n");
+   printf("\nPorcentagem de votos de 027- fulano :%.2f%%\nPorcentagem de votos de 414- Beltrando :%.2f%%\nPorcentagem de votos de 687- Sicrano :%.2f%%\nPorcentagem de votos Nulos :%.2f%%\n",porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4);
+
+   //
+   totalVotosV = c4 + c5 + c6 +vnv;
+   porVereador1 = (100 * c4 ) / totalVotosV;
+   porVereador2 = (100 * c5 ) / totalVotosV;
+   porVereador3 = (100 * c6 ) / totalVotosV;
+   porVereador4 = (100 * vnv ) / totalVotosV;
+
+    printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA VEREADOR---------\n");
+   printf("\nPorcentagem de votos de 055- Megano :%.2f%%\nPorcentagem de votos de 251- Citano :%.2f%%\nPorcentagem de votos de 714- Zutano :%.2f%%\nPorcentagem de votos Nulos :%.2f%%\n",porVereador1,porVereador2,porVereador3,porVereador4);
+
+   //Imprimir o vencedor para prefeito
 if (c1 >= c2 && c1 >= c3 )
     {
         printf("\n027- fulano foi O VENCEDOR para PREFEITO\n");
@@ -121,23 +141,6 @@ if (c4 >= c5 && c4 >= c6 )
     }else{
         printf("\n714- Zutano foi O VENCEDOR para VEREADOR\n");
     }
-
-   totalVotosP = c1 + c2 + c3 ;
-   totalVotosV = c4 + c5 + c6 ;
-
-   porPrefeito1 = (100 * c1 ) / totalVotosP;
-   porPrefeito2 = (100 * c3 ) / totalVotosP;
-   porPrefeito3 = (100 * c4 ) / totalVotosP;
-   porPrefeito4 = (100 * vn ) / totalVotosP;
-   printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA PREFEITO---------\n");
-   printf("\nPorcentagem de votos de 027- fulano :%.2f\n",porPrefeito1);
-   printf("Porcentagem de votos de 414- Beltrando :%.2f\n",porPrefeito1);
-   printf("Porcentagem de votos de 687- Sicrano :%.2f\n",porPrefeito1);
-   printf("Porcentagem de votos Nulos :%.2f\n",porPrefeito4);
-
-
-
-
 
 return 0;
 }
