@@ -142,5 +142,6 @@ if (c4 >= c5 && c4 >= c6 )
         printf("\n714- Zutano foi O VENCEDOR para VEREADOR\n");
     }
 
+
 return 0;
 }
