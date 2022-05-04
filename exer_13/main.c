@@ -1,8 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(){
 
-int c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,vn=0,vnv=0,tv=0,pv=0,vp=7,vv=7;
+int c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,vn=0,vnv=0,totalVotosP=0,totalVotosV=0,vp=7,vv=7;
+float porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4;
 char cr;
 
     printf("-------Inicie as Votacoes-------");
@@ -118,6 +121,23 @@ if (c4 >= c5 && c4 >= c6 )
     }else{
         printf("\n714- Zutano foi O VENCEDOR para VEREADOR\n");
     }
+
+   totalVotosP = c1 + c2 + c3 ;
+   totalVotosV = c4 + c5 + c6 ;
+
+   porPrefeito1 = (100 * c1 ) / totalVotosP;
+   porPrefeito2 = (100 * c3 ) / totalVotosP;
+   porPrefeito3 = (100 * c4 ) / totalVotosP;
+   porPrefeito4 = (100 * vn ) / totalVotosP;
+   printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA PREFEITO---------\n");
+   printf("\nPorcentagem de votos de 027- fulano :%.2f\n",porPrefeito1);
+   printf("Porcentagem de votos de 414- Beltrando :%.2f\n",porPrefeito1);
+   printf("Porcentagem de votos de 687- Sicrano :%.2f\n",porPrefeito1);
+   printf("Porcentagem de votos Nulos :%.2f\n",porPrefeito4);
+
+
+
+
 
 return 0;
 }
