@@ -6,7 +6,7 @@ Escreva um programa que leia um número inteiro e calcule a soma de todos os div
 
 int main()
 {
-    int soma = 0, num, contDivi=0 ;
+    int soma = 0, num;
 
      printf("Digite um numero interio\n");
      scanf("%i",&num);
@@ -22,7 +22,7 @@ int main()
      }
 
    }
-   printf("\n %i",soma);
+   printf("\nA soma dos divisores de %i e: %i",num,soma);
 
     return 0;
 }
