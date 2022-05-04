@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 /*
 
@@ -7,6 +6,7 @@
  .......
 
 */
+#include <stdio.h>
 
 int main(void) {
   int idade, inden, notaPeca, qtd10=0, somaIdades=0, opinaoruim=0, idVelha=0,IDvelho=0;
