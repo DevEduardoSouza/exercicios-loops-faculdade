@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /*  
     Uma  empresa  possui  10  funcionários,  onde  todos  começaram  a   trabalhar  em épocas diferentes . Escreva um  programa que a  partir de  uma lista  digitada com o nome  e  tempo  de  serviço  de  cada  funcionário  (em  meses),  apresente  o funcionário mais novo e o mais antigo da empresa
@@ -12,7 +13,7 @@ int main()
         mes   =0,
         novo  =0,
         velho =0;
-    char nome[30];
+    char nome[30],nomeVelho[30],nomeNovo[30];
 
 
     for (int i = 1; i <= 3; i++)
@@ -25,6 +26,8 @@ int main()
         if (temp >= velho)
         {
             velho=temp;
+            strcpy(nomeVelho,nome);
+
         }
 
         if ( temp <= novo )
@@ -34,7 +37,7 @@ int main()
         
     
     }    
-    printf("\nfuncionario mais velho na empresa %i",velho);
+    printf("\nfuncionario mais velho na empresa %i %s",velho,nomeVelho);
     printf("\nfuncionario mais novo na empresa %i",novo);
 
     return 0;
