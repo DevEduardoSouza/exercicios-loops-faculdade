@@ -27,18 +27,18 @@ int main()
         {
             velho=temp;
             strcpy(nomeVelho,nome);
-
         }
 
-        if ( temp <= novo )
+        if ( temp <= novo && temp < velho )
         {
             novo=temp;
+            strcpy(nomeNovo,nome);
         }
         
     
     }    
-    printf("\nfuncionario mais velho na empresa %i %s",velho,nomeVelho);
-    printf("\nfuncionario mais novo na empresa %i",novo);
+    printf("\nfuncionario mais velho na empresa: %s com %i meses",nomeVelho,velho);
+    printf("\nfuncionario mais velho na empresa: %s com %i meses",nomeNovo,novo);
 
     return 0;
 }
