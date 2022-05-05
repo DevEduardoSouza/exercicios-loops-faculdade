@@ -9,12 +9,13 @@
 //função principal
 int main()
 {
-    int temp  =0,
+    int temp  ,
         mes   =0,
         novo  =0,
         velho =0;
     char nome[30],nomeVelho[30],nomeNovo[30];
 
+      
 
     for (int i = 1; i <= 3; i++)
     {
@@ -23,22 +24,22 @@ int main()
         printf("Tempo de servico em meses\n");
         scanf("%i",&temp);
 
-        if (temp >= velho)
+        novo=temp;
+
+        if (temp > velho)
         {
             velho=temp;
             strcpy(nomeVelho,nome);
         }
-
-        if ( temp <= novo && temp < velho )
+         if (velho < temp)
         {
-            novo=temp;
-            strcpy(nomeNovo,nome);
+           novo=temp; 
+           strcpy(nomeNovo,nome);
         }
         
-    
     }    
     printf("\nfuncionario mais velho na empresa: %s com %i meses",nomeVelho,velho);
-    printf("\nfuncionario mais velho na empresa: %s com %i meses",nomeNovo,novo);
+    printf("\nfuncionario mais novo na empresa: %s com %i meses",nomeNovo,novo);
 
     return 0;
 }

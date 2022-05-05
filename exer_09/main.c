@@ -12,7 +12,8 @@ int main(void) {
   int idade, inden, notaPeca, qtd10=0, somaIdades=0, opinaoruim=0, idVelha=0,IDvelho=0;
   float md_idade, porcentagemruim;
 
-  for(int i=1;i<=2;i++){
+  for(int i=1;i<=10;i++) 
+  {
 
     printf("Digite sua idade\n");
     scanf("%i",&idade);
@@ -22,7 +23,7 @@ int main(void) {
     scanf("%i",&notaPeca);
     printf("\n");
 
-    if (idade >= idVelha) // indentificador da idade mais velha
+    if (idade >= idVelha) // indentificador da idade mais velha e idade mais velha
     {
         idVelha = idade;
         IDvelho = inden;
@@ -36,7 +37,7 @@ int main(void) {
     
     //calcular a média de idade das pessoas
     somaIdades = somaIdades + idade;
-    md_idade = somaIdades/6;
+    md_idade = somaIdades/10.0;
 
     if(notaPeca<=5)//Guarda o total de notas menor ou igual a 5
     {
@@ -44,7 +45,7 @@ int main(void) {
     }
 
     //calcular porcentagem de notas menor ou igual 5
-    porcentagemruim = (opinaoruim * 100)/6;
+    porcentagemruim = (opinaoruim * 100)/10.0;
   }
   
   

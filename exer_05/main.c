@@ -1,17 +1,19 @@
+/*
+
+Faça um programa que exiba a sequencia completa abaixo:
+0/100, 2/96, 4/92, 6/88, .....50/0 
+
+*/
 #include <stdio.h>
 
 int main()
 { 
+    int baixo = 104;
     for (int i = 0; i <= 50; i+=2)
     {
-        printf(" %i ", i);
-        
+        baixo = baixo - 4;
+        printf(" %i/%i, ", i,baixo);
     }
-    printf("\n");
-    for (int j = 100; j >=0; j-=4)
-    {
-        printf("%i  ", j);
-    }
-    
+   
     return 0;
 }
