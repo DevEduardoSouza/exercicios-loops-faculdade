@@ -5,23 +5,32 @@ Escreva um programa em C para converter um número decimal em binário.
 
 int main()
 {
-    int numeroDecimal,resultadoDiv=0,binario1;
+    int resultadoDiv=0,binario1,binario0,numeroDecimal;
+
+    printf("\ndigite um numero em decimal para converte em binario\n");
+    scanf("%i",&numeroDecimal);
     
-    
-    do
+    for (int i = 1; i <= 10 ; i++)
     {
         
-        printf("digite um numero em decimal para converte em binario\n");
-        scanf("%i",&numeroDecimal);
-        resultadoDiv = numeroDecimal / 2;
-        if (numeroDecimal  % 2 == 0)
+        
+   
+       if (numeroDecimal  % 2 == 1)
         {
             binario1 = 1;
-            printf("%i",binario1);
+            printf("\n%i\n",binario1);
+
+        }else if (numeroDecimal  % 2 != 1){
+            binario0 = 0;
+            printf("\n%i\n",binario0);
         }
-        printf("%i",resultadoDiv);
-    } while (numeroDecimal=!1);
         
-  
+
+        
+    }
+     
+      
+        
+
     return 0;
 }
