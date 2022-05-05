@@ -16,29 +16,31 @@ int main()
         printf("\nDigite o numero corresspondente a sua operacao\n1 - adicao\n2 - subtracao\n3 - multiplicacao\n4 - divisao\n5 - sair\n");
         scanf("%i",&opcao);
 
-        switch (opcao)
+        switch (opcao)//Operações matemáticas
         {
+        //Soma
         case 1:
          soma = num1 + num2;
          printf(" %i + %i = %i\n",num1,num2,soma);
         break;
-
+        //Subtração
         case 2:
          subtracao = num1 - num2;
          printf(" %i - %i = %i\n",num1,num2,subtracao);
         break;
-
+        //Multiplicação
         case 3:
          multiplicacao = num1 * num2;
          printf(" %i x %i = %i\n",num1,num2,multiplicacao);
         break;
-
+        //Divisão
         case 4:
          divisao = num1 / num2;
          printf(" %i / %i = %i\n",num1,num2,divisao);
         break;
 
         case 5:
+            printf("\nPrograma encerrado\n");
         break;
         
         default:
