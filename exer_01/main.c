@@ -14,11 +14,11 @@ int main()
         novo  =0,
         velho =0;
     char nome[30],nomeVelho[30],nomeNovo[30];
-    float cont=1;
+    int cont=1;
 
       
 
-    for (int i = 1; i <= 3; i++)
+    while  ( cont <= 4)
     {
         printf("\nNome do funcionario\n");
         scanf("%s",&nome);
@@ -30,18 +30,18 @@ int main()
         velho = temp;
         novo = velho;
        }
-
-        if (temp > velho)
+        else if (temp > velho)
         {
             velho=temp;
             strcpy(nomeVelho,nome);
         }
-         if (velho < temp)
+         else if (novo < velho)
         {
            novo=temp; 
            strcpy(nomeNovo,nome);
         }
         cont++;
+        
         
     }    
     printf("\nfuncionario mais velho na empresa: %s com %i meses",nomeVelho,velho);
