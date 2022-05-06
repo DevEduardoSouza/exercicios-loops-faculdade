@@ -10,7 +10,7 @@
 
 int main()
 {
-    int idade, ccs, morenas=0 , tm=0 ,louras=0;
+    int idade, ccs, morenas=0 , totalm=0 ,louras=0;
     float prcl=0;
     char sexo;
            
@@ -61,7 +61,7 @@ int main()
 
       case 'f':
       case 'F':
-            tm=tm+1;
+            totalm=totalm+1;
       break;
       
       default:
@@ -72,10 +72,10 @@ int main()
     } while (idade!=-1);
     
     //Imprimir Resultados
-    prcl = (100 * louras)/tm;
+    prcl = (100 * louras)/totalm;
     printf("\nPorcentagem das mulheres entre 18 e 35 anos,louras: %.1f%%",prcl);
 
-    prcl = (100 * morenas)/tm;
+    prcl = (100 * morenas)/totalm;
     printf("\nPorcentagem das mulheres entre 18 e 35 anos,louras: %.1f%%",prcl);
     
 

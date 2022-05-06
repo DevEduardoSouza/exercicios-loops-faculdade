@@ -30,12 +30,12 @@ int main() {
     //Percentual de funcionarios peso normal masculinos e femininos
     if(sexo == 'm'||sexo== 'M'){
       if(imc<=25){
-        printf("\npeso normal");
+        printf("\nPeso normal");
       }
     }
     if(sexo == 'f'||sexo == 'F'){
       if(imc<=27){
-        printf("\npeso normal");
+        printf("\nPeso normal");
         
       }
     }
