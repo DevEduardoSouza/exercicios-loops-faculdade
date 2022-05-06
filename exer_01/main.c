@@ -14,6 +14,7 @@ int main()
         novo  =0,
         velho =0;
     char nome[30],nomeVelho[30],nomeNovo[30];
+    float cont=1;
 
       
 
@@ -24,7 +25,11 @@ int main()
         printf("Tempo de servico em meses\n");
         scanf("%i",&temp);
 
-        novo=temp;
+        if (cont == 1) 
+       {
+        velho = temp;
+        novo = velho;
+       }
 
         if (temp > velho)
         {
@@ -36,6 +41,7 @@ int main()
            novo=temp; 
            strcpy(nomeNovo,nome);
         }
+        cont++;
         
     }    
     printf("\nfuncionario mais velho na empresa: %s com %i meses",nomeVelho,velho);
