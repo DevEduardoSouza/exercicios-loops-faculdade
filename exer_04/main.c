@@ -1,3 +1,6 @@
+/*
+ Escreva uma programa de compras em que o usuário insira o código de cada produto comprado e a quantidade. Seu programa deverá calcular o valor comprado de cada produto seguindo a tabela abaixo. Após inserir os dados do produto o sistema deverá perguntar se o mesmo deseja inserir mais produtos (S-sim ou N – não).  Ao finalizar a entrada de cada produto o sistema deverá calcular o valor total da compra.     Em seguida informe ao usuário 3 opções de pagamento: 1 - A vista com desconto de 10%, 2 - A prazo (neste caso solicite ao usuário o número de parcelas), 3 - no crediário com um acréscimo de 5% (solicite também que o usuário digite o número de parcelas). Ao final informe ao usuário o valor total. Caso tenha escolhido a forma de pagamento 2 ou 3 informes o número de parcelas, o valor de cada parcela e o valor total da compra. Lembre de calcular adicionar 5% ao total da compra caso o usuário escolar a forma de pagamento número 3 após. Do mesmo modo aplique o desconto de 10% caso opte pelo pagamento a Vista.
+*/
 #include<stdio.h>
 
 int main()
