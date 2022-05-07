@@ -9,92 +9,97 @@ float porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4,porVereador1,porVeread
 char cr;
 
     printf("-------Inicie as Votacoes-------");
-
-    while(vp!=999)
-
+    while(vp!=999)//permanecer no loop até que seja informado 999
     {
-    //Imprimir as opcoes disponiveis
-    printf("\n\nDigite o numero do seu candidato para PREFEITO e pressione ENTRE\n027- fulano - PPP\n414- Beltrando - PRF\n687- Sicrano - PSB\n000- Voto nulo\n");
-    scanf("%i",&vp);
 
-    //Contabilizar votos para prefeito 
-    switch(vp){
+        do//para permanecer no loop até que seja informado 'C'
+        {
+            //Imprimir as opcoes disponiveis para prefeito
+            printf("\n\nDigite o numero do seu candidato para PREFEITO e pressione ENTRE\n027- fulano - PPP\n414- Beltrando - PRF\n687- Sicrano - PSB\n000- Voto nulo\n");
+            scanf("%i",&vp);
 
-        case 999:
-        printf("\n\t\tVotacao para PREFEITO ENCERRADA\n");
-        break;
-        
-        case 027:
-        c1=c1+1;
-        printf("\n027- fulano - PPP\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
-        
-        case 414:
-        c2=c2+1;
-        printf("\n414- Beltrano - PRF\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
-        
-        case 687:
-        c3=c3+1;
-        printf("\n687- Sicrano - PSB\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
-        
-        case 000:
-        vn=vn+1;
-        printf("\n000- Voto nulo\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
+            printf("C - para confirmar ou D - para corrigir\n");
+            scanf("%s",&cr);
+            
+        } while (cr!='C');
 
-        default:
-        printf("Numero candidato INVALIDO!!");
-        break;
+        //Contabilizar votos para prefeito 
+        switch(vp){
+
+            case 999:
+            printf("\n\t\tVotacao para PREFEITO ENCERRADA\n");
+            break;
+            
+            case 027:
+            c1=c1+1;
+            printf("\n027- fulano - PPP\n");
+            break;
+            
+            case 414:
+            c2=c2+1;
+            printf("\n414- Beltrano - PRF\n");
+            break;
+            
+            case 687:
+            c3=c3+1;
+            printf("\n687- Sicrano - PSB\n");
+            break;
+            
+            case 000:
+            vn=vn+1;
+            printf("\n000- Voto nulo\n");
+            break;
+
+            default:
+            printf("Numero candidato INVALIDO!!");
+            break;
+            
+        }
+           
+        do//para permanecer no loop até que seja informado 'C'
+        {
+        //Opções para vereador
+        printf("\n\nDigite o numero do seu candidato para VEREADOR e pressione ENTRE\n055- Megano - TPP\n251- Citano - FPP\n714- Zutano - PSB\n000- Voto nulo\n");
+        scanf("%i",&vp);
+
+        printf("C - para confirmar ou D - para corrigir\n");
+        scanf("%s",&cr);
+
+        } while (cr!='C');
         
+        //Contabilizar votos para vereador
+        switch(vp)
+        {
+            case 999:
+            printf("\n\t\tVotacao ENCERRADA\n");
+            break;
+            
+            case 055:
+            c4=c4+1;
+            printf("\n055- Megano - TPP\n");
+            break;
+            
+            case 251:
+            c5=c5+1;
+            printf("\n251- Citano - FPP\n");
+            break;
+            
+            case 714:
+            c6=c6+1;
+            printf("\n714- Zutano - PSB\n");
+            break;
+
+            case 000:
+            vnv=vnv+1;
+            printf("\n000- Voto nulo\n");
+            break;
+
+            default:
+            printf("Numero candidato INVALIDO!!");
+            break;
+        }
+
     }
-
-        
-    printf("\n\nDigite o numero do seu candidato para VEREADOR e pressione ENTRE\n055- Megano - TPP\n251- Citano - FPP\n714- Zutano - PSB\n000- Voto nulo\n");
-    scanf("%i",&vp);
-     
-    //Contabilizar votos para vereador
-    switch(vp)
-    {
-        case 999:
-        printf("\n\t\tVotacao ENCERRADA\n");
-        break;
-        
-        case 055:
-        c4=c4+1;
-        printf("\n055- Megano - TPP\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
-        
-        case 251:
-        c5=c5+1;
-        printf("\n251- Citano - FPP\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
-        
-        case 714:
-        c6=c6+1;
-        printf("\n714- Zutano - PSB\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
-
-        case 000:
-        vnv=vnv+1;
-        printf("\n000- Voto nulo\nC para confirmar --- D para corrigir\n");
-        scanf("%s",&cr);
-        break;
-
-        default:
-        printf("Numero candidato INVALIDO!!");
-        break;
-    }
-
-}
 
 printf("\n APURACAO DE VOTOS PARA PREFEITO\nQuantidade de votos para Fulano: %i\nQuantidade de votos para Beltrando: %i\nQuantidade de votos para Sicrando: %i\nVotos nulos: %i\n",c1,c2,c3,vn);
   
