@@ -13,12 +13,13 @@ int main()
     
     do
     {
+        //
         printf("\nDigite o codigo do produto\n");
         scanf("%i",&codigoProduto);
         printf("A quantidade desse produto\n");
         scanf("%i",&qtdProduto);
 
-        switch (codigoProduto)
+        switch (codigoProduto)//
         {
         case 1200:
             produto = 5.0;
@@ -208,7 +209,6 @@ int main()
         break;
     }
 
-     
     return 0;
 }
 

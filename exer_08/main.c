@@ -6,9 +6,11 @@ Escreva um programa em C para encontrar os números primos dentro de um interval
 
 int main(void) {
   
-  int primo;
+  int primo,num;
+  printf("Digite um numero para encotra todos os primos antecessor\n");
+  scanf("%i",&num);
 
-  for(int i=2 ; i<=50 ; i++){
+  for(int i=1 ; i<=num ; i++){
 
     primo=0;
     for (int x = 1; x <=i; x++){

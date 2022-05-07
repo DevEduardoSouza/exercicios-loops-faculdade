@@ -10,12 +10,12 @@ int main() {
     // Recolher dados dos funcionarios
   
     printf("\nNome  do funcionario\n");
-    scanf (" %256[^\n]", nome);
+    scanf (" %256[^\n]", &nome);
     printf("\nSexo do funcionaro(m, M ou f, F)\n");
     scanf(" %c",&sexo);
-    printf("\nPeso do funcionario (em KG)\n");
+    printf("\nPeso do funcionario (em KG: exemplo 75.62)\n");
     scanf(" %f",&peso);
-    printf("\nAltura do funcionario (metros)\n"); 
+    printf("\nAltura do funcionario (metros: exemplo 1.80)\n"); 
     scanf(" %f",&altura);
 
     //Informar o IMC(Indice de Massa Corporal) de cada funcionario
@@ -25,17 +25,17 @@ int main() {
 
     //Percentual de funcionarios obesos
     if(imc >= 30){
-      printf(" Funcionario obeso");
+      printf(" Funcionario obeso\n");
     }
     //Percentual de funcionarios peso normal masculinos e femininos
     if(sexo == 'm'||sexo== 'M'){
       if(imc<=25){
-        printf("\nPeso normal");
+        printf(" Peso normal\n");
       }
     }
     if(sexo == 'f'||sexo == 'F'){
       if(imc<=27){
-        printf("\nPeso normal");
+        printf(" Peso normal\n");
         
       }
     }

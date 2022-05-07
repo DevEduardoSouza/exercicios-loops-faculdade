@@ -19,7 +19,7 @@ int main()
      //Pedir dados 
       printf("Informe a idade\n");
       scanf("%i",&idade);
-
+      
       printf("Digite o sexo m,M ou f,F\n");
       scanf (" %s256[^\n]",&sexo);
 
@@ -73,10 +73,10 @@ int main()
     
     //Imprimir Resultados
     prcl = (100 * louras)/totalm;
-    printf("\nPorcentagem das mulheres entre 18 e 35 anos,louras: %.1f%%",prcl);
+    printf("\nPorcentagem das mulheres entre 18 e 35 anos, louras: %.1f%%",prcl);
 
     prcl = (100 * morenas)/totalm;
-    printf("\nPorcentagem das mulheres entre 18 e 35 anos,louras: %.1f%%",prcl);
+    printf("\nPorcentagem das mulheres entre 18 e 35 anos, morenas: %.1f%%",prcl);
     
 
     return 0;

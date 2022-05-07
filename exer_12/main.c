@@ -47,9 +47,7 @@ int main()
 
     printf("Valor do produto mais caro (apos aumento): R$ %.2f",valorMaior);
 
-
-
-    
+ 
     return 0;
 }
 
