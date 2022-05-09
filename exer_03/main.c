@@ -8,7 +8,6 @@ int main() {
 
   for(int i=1; i<=20; i++){
     // Recolher dados dos funcionarios
-  
     printf("\nNome  do funcionario\n");
     scanf (" %256[^\n]", &nome);
     printf("\nSexo do funcionaro(m, M ou f, F)\n");
@@ -19,7 +18,6 @@ int main() {
     scanf(" %f",&altura);
 
     //Informar o IMC(Indice de Massa Corporal) de cada funcionario
-
     imc = peso/(altura * altura);
     printf("\nO indice de massa corporal de %s e: %.2f",nome,imc);
 

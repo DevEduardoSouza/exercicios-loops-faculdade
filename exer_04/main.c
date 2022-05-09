@@ -155,6 +155,7 @@ int main()
 
         printf("Deseja enserir mais produto (S - sim ou N -nao)\n");
         scanf("%s",&opcao);
+
         switch (opcao)
         {
         case 'S':

@@ -10,8 +10,7 @@ int main()
         anterior=atual;
         atual=prox;
         div= (cima/prox);
-        s = s + div;
-        
+        s = s + div;   
     }
     printf("Resultado de s : %.2f",s);
     return 0;

@@ -106,7 +106,7 @@ printf("\n APURACAO DE VOTOS PARA PREFEITO\nQuantidade de votos para Fulano: %i\
 printf("\n APURACAO DE VOTOS PARA VEREADOR\nQuantidade de votos para Megano: %i\nQuantidade de votos para Citano: %i\nQuantidade de votos para Zutano: %i\nVotos nulos: %i\n",c4,c5,c6,vnv);
 
   //
-   totalVotosP = c1 + c2 + c3 +vn;
+   totalVotosP = c1 + c2 + c3 + vn;
    porPrefeito1 = (100 * c1 ) / totalVotosP;
    porPrefeito2 = (100 * c2 ) / totalVotosP;
    porPrefeito3 = (100 * c3 ) / totalVotosP;
