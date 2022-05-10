@@ -18,6 +18,7 @@ int main(void) {
         primo++;
       }  
     }
+    
      if(primo==2){
          printf("%d, ", i);
       }

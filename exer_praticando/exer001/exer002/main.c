@@ -3,17 +3,21 @@
 
 int main()
 {
-    int num,quadrado;
+    int primo;
     
-    for (int i = 1; i <= 5; i++)
-    {
-        printf("\nDigite um vumero inteiro: ");
-        scanf("%i",&num);
+    for(int i=130 ; i<=190 ; i+=2){
 
-        quadrado = num * num; 
-        printf("O quadrado do numero %i = %i",num,quadrado);
+    primo=0;
+    for (int x = 1; x <=i; x++){
+      if(i % x == 0){
+        primo++;
+      }  
     }
     
-    
-    return 0;
+     if(primo==2){
+         printf("%d, ", i);
+      }
+  }
+  
+  return 0;
 }
