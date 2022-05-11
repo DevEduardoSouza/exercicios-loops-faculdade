@@ -6,7 +6,7 @@ int main()
     int num=0,maiorNum=0,qtdMaiorNum=0;
     do
     {
-      printf("Digite um numero ou digita 0 para parar o programa\n");
+      printf("Digite um numero ou digite 0 para parar o programa\n");
       scanf("%i",&num);
 
       if (num >= maiorNum)

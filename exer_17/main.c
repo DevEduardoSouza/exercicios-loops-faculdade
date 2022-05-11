@@ -2,7 +2,8 @@
 
 int main()
 {
-    int opcao,num1,num2,soma=0,subtracao=0,multiplicacao=0,divisao=0;
+    int opcao,num1,num2,soma=0,subtracao=0,multiplicacao=0;
+    float divisao=0;
 
     printf("\n-----------------Calculadora 1.0-----------------\n");
     do
@@ -35,8 +36,8 @@ int main()
         break;
         //Divisão
         case 4:
-         divisao = num1 / num2;
-         printf(" %i / %i = %i\n",num1,num2,divisao);
+         divisao = (float)num1 / (float)num2;
+         printf("%i / %i = %.2f\n",num1,num2,divisao);
         break;
 
         case 5:
