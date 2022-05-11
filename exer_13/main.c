@@ -12,16 +12,9 @@ char cr;
     while(vp!=999)//permanecer no loop até que seja informado 999
     {
 
-        do//para permanecer no loop até que seja informado 'C'
-        {
-            //Imprimir as opcoes disponiveis para prefeito
-            printf("\n\nDigite o numero do seu candidato para PREFEITO e pressione ENTRE\n027- fulano - PPP\n414- Beltrando - PRF\n687- Sicrano - PSB\n000- Voto nulo\n");
-            scanf("%i",&vp);
-
-            printf("C - para confirmar ou D - para corrigir\n");
-            scanf("%s",&cr);
-            
-        } while (cr!='C');
+          //Imprimir as opcoes disponiveis para prefeito
+         printf("\n\nDigite o numero do seu candidato para PREFEITO e pressione ENTRE\n027- fulano - PPP\n414- Beltrando - PRF\n687- Sicrano - PSB\n000- Voto nulo\n");
+         scanf("%i",&vp);
 
         //Contabilizar votos para prefeito 
         switch(vp){
@@ -31,42 +24,58 @@ char cr;
             break;
             
             case 027:
-            c1=c1+1;
             printf("\n027- fulano - PPP\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+            scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                    c1=c1+1;
+                }
             break;
             
             case 414:
-            c2=c2+1;
             printf("\n414- Beltrano - PRF\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+            scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                    c2=c2+1;
+                }
             break;
             
             case 687:
-            c3=c3+1;
             printf("\n687- Sicrano - PSB\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+            scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                    c3=c3+1;
+                }
             break;
             
             case 000:
-            vn=vn+1;
             printf("\n000- Voto nulo\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+            scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                    vn=vn+1;
+                }
             break;
 
+
             default:
-            printf("Numero candidato INVALIDO!!");
+                printf("Numero candidato INVALIDO!!");
             break;
             
         }
-           
-        do//para permanecer no loop até que seja informado 'C'
-        {
-            //Opções para vereador
-            printf("\n\nDigite o numero do seu candidato para VEREADOR e pressione ENTRE\n055- Megano - TPP\n251- Citano - FPP\n714- Zutano - PSB\n000- Voto nulo\n");
-            scanf("%i",&vp);
+        printf("VOTO PARA PREFEITO CONFIRMADO!\n");
+        printf("--------------------------------------------------------------------------------");
 
-            printf("C - para confirmar ou D - para corrigir\n");
-            scanf("%s",&cr);
+        //Opções para vereador
+        printf("\n\nDigite o numero do seu candidato para VEREADOR e pressione ENTRE\n055- Megano - TPP\n251- Citano - FPP\n714- Zutano - PSB\n000- Voto nulo\n");
+        scanf("%i",&vp);
 
-        } while (cr!='C');
-        
         //Contabilizar votos para vereador
         switch(vp)
         {
@@ -75,46 +84,86 @@ char cr;
             break;
             
             case 055:
-            c4=c4+1;
             printf("\n055- Megano - TPP\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+        scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                    c4=c4+1;
+                }
             break;
             
             case 251:
-            c5=c5+1;
             printf("\n251- Citano - FPP\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+        scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                    c5=c5+1;
+                }
             break;
             
             case 714:
-            c6=c6+1;
             printf("\n714- Zutano - PSB\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+        scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                     c6=c6+1;
+                }
             break;
 
             case 000:
             vnv=vnv+1;
             printf("\n000- Voto nulo\n");
+            printf("C - para confirmar ou D - para corrigir\n");
+        scanf("%s",&cr);
+            if(cr=='c'||'C')
+                {
+                    vnv=vnv+1;
+                }
             break;
 
             default:
             printf("Numero candidato INVALIDO!!");
             break;
         }
+        printf("VOTO PARA VEREADOR CONFIRMADO!\n");
+        printf("--------------------------------------------------------------------------------");
 
     }
 
+//Resultado para prefeito
 printf("\n APURACAO DE VOTOS PARA PREFEITO\nQuantidade de votos para Fulano: %i\nQuantidade de votos para Beltrando: %i\nQuantidade de votos para Sicrando: %i\nVotos nulos: %i\n",c1,c2,c3,vn);
-  
-printf("\n APURACAO DE VOTOS PARA VEREADOR\nQuantidade de votos para Megano: %i\nQuantidade de votos para Citano: %i\nQuantidade de votos para Zutano: %i\nVotos nulos: %i\n",c4,c5,c6,vnv);
 
-  //
+//Calcular a porcentagem para prefeito
    totalVotosP = c1 + c2 + c3 + vn;
    porPrefeito1 = (100 * c1 ) / totalVotosP;
    porPrefeito2 = (100 * c2 ) / totalVotosP;
    porPrefeito3 = (100 * c3 ) / totalVotosP;
    porPrefeito4 = (100 * vn ) / totalVotosP;
-
+   //Imprimir as porcentagems dso prefeitos
    printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA PREFEITO---------\n");
    printf("\nPorcentagem de votos de 027- fulano :%.2f%%\nPorcentagem de votos de 414- Beltrando :%.2f%%\nPorcentagem de votos de 687- Sicrano :%.2f%%\nPorcentagem de votos Nulos :%.2f%%\n",porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4);
+    //Imprimir o vencedor para prefeito
+    if (c1 >= c2 && c1 >= c3 )
+    {
+        printf("\n027- fulano foi O VENCEDOR para PREFEITO\n");
+    }else if (c2>= c1 && c2 >= c3)
+    {
+        printf("\n414- Beltrando foi O VENCEDOR para PREFEITO\n");
+    }else{
+        printf("\n687- Sicrano foi O VENCEDOR para PREFEITO\n");
+    }
 
+    
+
+
+
+  
+printf("\n APURACAO DE VOTOS PARA VEREADOR\nQuantidade de votos para Megano: %i\nQuantidade de votos para Citano: %i\nQuantidade de votos para Zutano: %i\nVotos nulos: %i\n",c4,c5,c6,vnv);
+
+  
    //
    totalVotosV = c4 + c5 + c6 +vnv;
    porVereador1 = (100 * c4 ) / totalVotosV;
@@ -125,16 +174,7 @@ printf("\n APURACAO DE VOTOS PARA VEREADOR\nQuantidade de votos para Megano: %i\
     printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA VEREADOR---------\n");
    printf("\nPorcentagem de votos de 055- Megano :%.2f%%\nPorcentagem de votos de 251- Citano :%.2f%%\nPorcentagem de votos de 714- Zutano :%.2f%%\nPorcentagem de votos Nulos :%.2f%%\n",porVereador1,porVereador2,porVereador3,porVereador4);
 
-   //Imprimir o vencedor para prefeito
-if (c1 >= c2 && c1 >= c3 )
-    {
-        printf("\n027- fulano foi O VENCEDOR para PREFEITO\n");
-    }else if (c2>= c1 && c2 >= c3)
-    {
-        printf("\n414- Beltrando foi O VENCEDOR para PREFEITO\n");
-    }else{
-        printf("\n687- Sicrano foi O VENCEDOR para PREFEITO\n");
-    }
+  
 
 //Imprimir o vencedor para vereador
 if (c4 >= c5 && c4 >= c6 )
