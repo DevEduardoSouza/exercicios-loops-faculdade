@@ -7,7 +7,7 @@ Escreva um programa em C para encontrar os números primos dentro de um interval
 int main(void) {
   
   int primo,num;
-  printf("Digite um numero para encotra todos os primos antecessor\n");
+  printf("Digite um numero para encotra todos os primos antecessores\n");
   scanf("%i",&num);
 
   for(int i=1 ; i<=num ; i++){

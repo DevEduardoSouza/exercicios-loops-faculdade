@@ -10,7 +10,7 @@ int main()
     printf("\ndigite um numero em decimal para converte em binario\n");
     scanf("%i",&numeroDecimal);
 
-     //verificar o resto do primeiro numerp
+     //verificar o resto do primeiro numero
             if (numeroDecimal  % 2 == 0)
             {
                 printf("0");
@@ -18,7 +18,7 @@ int main()
                 printf("1");
             }
     
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i <= 7; i++)
         {
             resultadoDiv = numeroDecimal / 2 ;
             numeroDecimal= 0 ;

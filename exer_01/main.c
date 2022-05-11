@@ -30,7 +30,7 @@ int main()
         velho = temp;
         novo = velho;
        }
-        else if (temp > velho)
+         if (temp > velho)
         {
             velho=temp;
             strcpy(nomeVelho,nome);

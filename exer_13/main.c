@@ -58,12 +58,12 @@ char cr;
            
         do//para permanecer no loop até que seja informado 'C'
         {
-        //Opções para vereador
-        printf("\n\nDigite o numero do seu candidato para VEREADOR e pressione ENTRE\n055- Megano - TPP\n251- Citano - FPP\n714- Zutano - PSB\n000- Voto nulo\n");
-        scanf("%i",&vp);
+            //Opções para vereador
+            printf("\n\nDigite o numero do seu candidato para VEREADOR e pressione ENTRE\n055- Megano - TPP\n251- Citano - FPP\n714- Zutano - PSB\n000- Voto nulo\n");
+            scanf("%i",&vp);
 
-        printf("C - para confirmar ou D - para corrigir\n");
-        scanf("%s",&cr);
+            printf("C - para confirmar ou D - para corrigir\n");
+            scanf("%s",&cr);
 
         } while (cr!='C');
         

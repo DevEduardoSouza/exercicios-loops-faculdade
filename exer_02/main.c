@@ -28,7 +28,9 @@ int main()
 
       printf("\n-----------------------------------------------------\n");
 
-      //Verificar a cor dos cabelos,idade e contabilizar.
+      
+     
+       //Verificar a cor dos cabelos,idade e contabilizar.
       switch (ccs)
       {
       case 1:
@@ -49,7 +51,12 @@ int main()
       default:
          printf("Opcao escolhida INVALIDA\n");
       break;
+
       }
+
+    
+
+      
 
       //Verificar o sexo e contabilizar total de mulheres
       switch (sexo)
