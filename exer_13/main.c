@@ -30,6 +30,7 @@ char cr;
             if(cr=='c'||'C')
                 {
                     c1=c1+1;
+                    printf("VOTO PARA VEREADOR CONFIRMADO!\n");
                 }
             break;
             
@@ -40,6 +41,7 @@ char cr;
             if(cr=='c'||'C')
                 {
                     c2=c2+1;
+                    printf("VOTO PARA VEREADOR CONFIRMADO!\n");
                 }
             break;
             
@@ -50,6 +52,7 @@ char cr;
             if(cr=='c'||'C')
                 {
                     c3=c3+1;
+                    printf("VOTO PARA VEREADOR CONFIRMADO!\n");
                 }
             break;
             
@@ -69,7 +72,7 @@ char cr;
             break;
             
         }
-        printf("VOTO PARA PREFEITO CONFIRMADO!\n");
+        
         printf("--------------------------------------------------------------------------------");
 
         //Opções para vereador
@@ -90,6 +93,7 @@ char cr;
             if(cr=='c'||'C')
                 {
                     c4=c4+1;
+                    printf("VOTO PARA VEREADOR CONFIRMADO!\n");
                 }
             break;
             
@@ -100,6 +104,7 @@ char cr;
             if(cr=='c'||'C')
                 {
                     c5=c5+1;
+                    printf("VOTO PARA VEREADOR CONFIRMADO!\n");
                 }
             break;
             
@@ -110,6 +115,7 @@ char cr;
             if(cr=='c'||'C')
                 {
                      c6=c6+1;
+                     printf("VOTO PARA VEREADOR CONFIRMADO!\n");
                 }
             break;
 
@@ -128,7 +134,7 @@ char cr;
             printf("Numero candidato INVALIDO!!");
             break;
         }
-        printf("VOTO PARA VEREADOR CONFIRMADO!\n");
+        
         printf("--------------------------------------------------------------------------------\n\n");
 
     }
@@ -158,13 +164,12 @@ printf("\n      ----------APURACAO DE VOTOS PARA PREFEITO----------\n\n\t\tPREFE
         printf("\n\n\t\t687- Sicrano foi O VENCEDOR para PREFEITO\n");
     }
 
-  printf("--------------------------------------------------------------------------------\n");
+  printf("\n\n--------------------------------------------------------------------------------\n\n");
 
     //Resultado para prefeito
     printf("      ----------APURACAO DE VOTOS PARA VEREADOR----------");
     printf("\n\n\t\tPREFEITOS\t\tVOTOS\n\t\tMegano\t\t\t  %i\n\t\tCitano\t\t\t  %i\n\t\tZutano\t\t\t  %i\n\t\tVotos nulos\t\t  %i\n",c4,c5,c6,vnv);
 
-  
     //Calcular a porcentagem para vereador
    totalVotosV = c4 + c5 + c6 +vnv;
    porVereador1 = (100 * c4 ) / totalVotosV;
@@ -173,18 +178,18 @@ printf("\n      ----------APURACAO DE VOTOS PARA PREFEITO----------\n\n\t\tPREFE
    porVereador4 = (100 * vnv ) / totalVotosV;
 
     //Imprimir as porcentagems dos vereadores
-   printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA VEREADOR---------\n");
-   printf("\nPorcentagem de votos de 055- Megano :%.2f%%\nPorcentagem de votos de 251- Citano :%.2f%%\nPorcentagem de votos de 714- Zutano :%.2f%%\nPorcentagem de votos Nulos :%.2f%%\n",porVereador1,porVereador2,porVereador3,porVereador4);
+   printf("\n      ----------PORCENTAGEM DE VOTOS PARA VEREADOR---------\n");
+   printf("\n\t\tVEREADORES\t\tPORCENTAGEM DE VOTOS\n\t\t055- Megano  \t\t%.2f%%\n\t\t251- Citano  \t\t%.2f%%\n\t\t714- Zutano  \t\t%.2f%%\n\t\tvotos Nulos  \t\t%.2f%%\n",porVereador1,porVereador2,porVereador3,porVereador4);
 
     //Imprimir o vencedor para vereador
     if (c4 >= c5 && c4 >= c6 )
         {
-            printf("\n055- Megano foi O VENCEDOR para VEREADOR\n");
+            printf("\n\n\t\t055- Megano foi O VENCEDOR para VEREADOR\n");
         }else if (c5>= c4 && c5 >= c6)
         {
-            printf("\n251- Citano foi O VENCEDOR para VEREADOR\n");
+            printf("\n\n\t\t251- Citano foi O VENCEDOR para VEREADOR\n");
         }else{
-            printf("\n714- Zutano foi O VENCEDOR para VEREADOR\n");
+            printf("\n\n\t\t714- Zutano foi O VENCEDOR para VEREADOR\n");
         }
 
 
