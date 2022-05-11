@@ -129,63 +129,63 @@ char cr;
             break;
         }
         printf("VOTO PARA VEREADOR CONFIRMADO!\n");
-        printf("--------------------------------------------------------------------------------");
+        printf("--------------------------------------------------------------------------------\n\n");
 
     }
 
 //Resultado para prefeito
-printf("\n APURACAO DE VOTOS PARA PREFEITO\nQuantidade de votos para Fulano: %i\nQuantidade de votos para Beltrando: %i\nQuantidade de votos para Sicrando: %i\nVotos nulos: %i\n",c1,c2,c3,vn);
+printf("\n      ----------APURACAO DE VOTOS PARA PREFEITO----------\n\n\t\tPREFEITOS\t\tVOTOS\n\t\tFulano\t\t\t  %i\n\t\tBeltrando\t\t  %i\n\t\tSicrando\t\t  %i\n\t\tVotos nulos\t\t  %i\n",c1,c2,c3,vn);
 
-//Calcular a porcentagem para prefeito
+   //Calcular a porcentagem para prefeito
    totalVotosP = c1 + c2 + c3 + vn;
    porPrefeito1 = (100 * c1 ) / totalVotosP;
    porPrefeito2 = (100 * c2 ) / totalVotosP;
    porPrefeito3 = (100 * c3 ) / totalVotosP;
    porPrefeito4 = (100 * vn ) / totalVotosP;
-   //Imprimir as porcentagems dso prefeitos
-   printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA PREFEITO---------\n");
-   printf("\nPorcentagem de votos de 027- fulano :%.2f%%\nPorcentagem de votos de 414- Beltrando :%.2f%%\nPorcentagem de votos de 687- Sicrano :%.2f%%\nPorcentagem de votos Nulos :%.2f%%\n",porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4);
+
+   //Imprimir as porcentagems dos prefeitos
+   printf("\n      ---------PORCENTAGEM DE VOTOS PARA PREFEITO---------\n");
+   printf("\n\t\tPREFEITOS\t\tPORCENTAGEM DE VOTOS\n\t\t027- fulano  \t\t%.2f%%\n\t\t414- Beltrando  \t%.2f%%\n\t\t687- Sicrano  \t\t%.2f%%\n\t\tvotos Nulos  \t\t%.2f%%",porPrefeito1,porPrefeito2,porPrefeito3,porPrefeito4);
+
     //Imprimir o vencedor para prefeito
     if (c1 >= c2 && c1 >= c3 )
     {
-        printf("\n027- fulano foi O VENCEDOR para PREFEITO\n");
+        printf("\n\n\t\t027- fulano foi O VENCEDOR para PREFEITO\n");
     }else if (c2>= c1 && c2 >= c3)
     {
-        printf("\n414- Beltrando foi O VENCEDOR para PREFEITO\n");
+        printf("\n\n\t\t414- Beltrando foi O VENCEDOR para PREFEITO\n");
     }else{
-        printf("\n687- Sicrano foi O VENCEDOR para PREFEITO\n");
+        printf("\n\n\t\t687- Sicrano foi O VENCEDOR para PREFEITO\n");
     }
 
-    
+  printf("--------------------------------------------------------------------------------\n");
 
-
+    //Resultado para prefeito
+    printf("      ----------APURACAO DE VOTOS PARA VEREADOR----------");
+    printf("\n\n\t\tPREFEITOS\t\tVOTOS\n\t\tMegano\t\t\t  %i\n\t\tCitano\t\t\t  %i\n\t\tZutano\t\t\t  %i\n\t\tVotos nulos\t\t  %i\n",c4,c5,c6,vnv);
 
   
-printf("\n APURACAO DE VOTOS PARA VEREADOR\nQuantidade de votos para Megano: %i\nQuantidade de votos para Citano: %i\nQuantidade de votos para Zutano: %i\nVotos nulos: %i\n",c4,c5,c6,vnv);
-
-  
-   //
+    //Calcular a porcentagem para vereador
    totalVotosV = c4 + c5 + c6 +vnv;
    porVereador1 = (100 * c4 ) / totalVotosV;
    porVereador2 = (100 * c5 ) / totalVotosV;
    porVereador3 = (100 * c6 ) / totalVotosV;
    porVereador4 = (100 * vnv ) / totalVotosV;
 
-    printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA VEREADOR---------\n");
+    //Imprimir as porcentagems dos vereadores
+   printf("\n\n\t---------PORCENTAGEM DE VOTOS PARA VEREADOR---------\n");
    printf("\nPorcentagem de votos de 055- Megano :%.2f%%\nPorcentagem de votos de 251- Citano :%.2f%%\nPorcentagem de votos de 714- Zutano :%.2f%%\nPorcentagem de votos Nulos :%.2f%%\n",porVereador1,porVereador2,porVereador3,porVereador4);
 
-  
-
-//Imprimir o vencedor para vereador
-if (c4 >= c5 && c4 >= c6 )
-    {
-        printf("\n055- Megano foi O VENCEDOR para VEREADOR\n");
-    }else if (c5>= c4 && c5 >= c6)
-    {
-        printf("\n251- Citano foi O VENCEDOR para VEREADOR\n");
-    }else{
-        printf("\n714- Zutano foi O VENCEDOR para VEREADOR\n");
-    }
+    //Imprimir o vencedor para vereador
+    if (c4 >= c5 && c4 >= c6 )
+        {
+            printf("\n055- Megano foi O VENCEDOR para VEREADOR\n");
+        }else if (c5>= c4 && c5 >= c6)
+        {
+            printf("\n251- Citano foi O VENCEDOR para VEREADOR\n");
+        }else{
+            printf("\n714- Zutano foi O VENCEDOR para VEREADOR\n");
+        }
 
 
 return 0;
