@@ -157,7 +157,7 @@ printf("\n      ----------APURACAO DE VOTOS PARA PREFEITO----------\n\n\t\tPREFE
     if (c1 >= c2 && c1 >= c3 )
     {
         printf("\n\n\t\t027- fulano foi O VENCEDOR para PREFEITO\n");
-    }else if (c2>= c1 && c2 >= c3)
+    }else if (c2 >= c1 && c2 >= c3)
     {
         printf("\n\n\t\t414- Beltrando foi O VENCEDOR para PREFEITO\n");
     }else{
