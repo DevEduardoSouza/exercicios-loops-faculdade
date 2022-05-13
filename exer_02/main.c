@@ -17,32 +17,46 @@ int main()
     do
     {
       //Pedir dados 
-      printf("Informe a idade\n");
+      printf("\nInforme a idade\n");
       scanf("%i",&idade);
+
+      //encerrar o programa aqui se o usuario digitar -1
+      if (idade == -1)
+      {
+        break;
+      }
       
       printf("Digite o sexo m,M ou f,F\n");
-      scanf (" %s256[^\n]",&sexo);
+      scanf ("%s",&sexo);
 
       printf("Escolha a opcao da cor dos cabelos\n1 - Louros\n2 - Castanhos\n3 - pretos\n ");
       scanf("%i",&cor_cabelos);
 
 
-      //Verificar a cor dos cabelos,idade e contabilizar.
+      //Verificar a cor dos cabelos, idade e contabilizar.
       switch (cor_cabelos)
       {
       case 1:
-          if ( idade >= 18 && idade <= 35 )
+        if (sexo == 'f' || sexo == 'F')
+        {
+          if ( idade >= 18 && idade <= 35)
            {
                 louros = louros + 1;
            }   
+          
+        }
       break;
 
       case 2:
       case 3:
-          if ( idade>=18 && idade<=35 )
+           if (sexo == 'f' || sexo == 'F')
+        {
+          if ( idade >= 18 && idade <= 35)
            {
-               morenos = morenos +1;
-           }  
+                morenos = morenos + 1;
+           }   
+          
+        }
       break;
 
       default:
@@ -70,12 +84,13 @@ int main()
       }
     
     } while (idade!=-1);
-    
+
+ 
     //Imprimir Resultados
-    procentagemCabelos = (100 * louros) / totalMulher;
+    procentagemCabelos = (100.0 * louros) / totalMulher;
     printf("\nPorcentagem das mulheres entre 18 e 35 anos, louras: %.2f%%",procentagemCabelos);
 
-    procentagemCabelos = (100 * morenos) / totalMulher;
+    procentagemCabelos = (100.0 * morenos) / totalMulher;
     printf("\nPorcentagem das mulheres entre 18 e 35 anos, morenas: %.2f%%",procentagemCabelos);
     
 
