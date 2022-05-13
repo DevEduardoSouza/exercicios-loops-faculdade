@@ -8,6 +8,11 @@ int main()
     {
         printf("\nDigite o ID do produto:");
         scanf(" %i",&id);
+        if (id==0)
+        {
+            break;
+        }
+        
         printf("\nDigite o valor do produto:");
         scanf(" %i",&valor);
         printf("\nInforme o percentual de aumento(sem o %%):");
@@ -19,7 +24,7 @@ int main()
 
         printf("O novo valor do produto  com %i%% de aumento: R$ %.2f  \n",percentualAumento,valorAumento);
 
-        if ( percentualAumento >5 && valorAumento > 100 )
+        if ( percentualAumento > 5 && valorAumento > 100 )
         {
             qtdProdutos = qtdProdutos + 1;
         }
@@ -39,9 +44,8 @@ int main()
     } while (id!=0);
 
 
-    printf("\nQuantidade de produtos mais caro que R$ 100.00(apos aumento) e que tiveram aumento superior a 5%%: %i\n",qtdProdutoszero);
+    printf("\nQuantidade de produtos mais caro que R$ 100.00(apos aumento) e que tiveram aumento superior a 5%%: %i\n",qtdProdutos);
 
-    qtdProdutoszero -=1;
     mdProdutosZero = somaProdtuosZero / qtdProdutoszero;
     printf("A media de valor de produtos que nao sofreram aumento: %.2f\n",mdProdutosZero);
 
