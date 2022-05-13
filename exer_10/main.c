@@ -21,7 +21,7 @@ int main()
                 printf("1");
             }
   
-        for (int i = 1; i = 10; i++)
+        for (int i = 1; i = 200; i++)
         {
             resultadoDiv = numeroDecimal / 2 ;
             numeroDecimal= 0 ;
