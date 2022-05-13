@@ -15,68 +15,82 @@ char confirmarVoto;
     do//permanecer no loop até que seja informado 999
     {
 
+        do
+        {
+        
         //Imprimir as opcoes disponiveis para prefeito
          printf("\n\nDigite o numero do seu candidato para PREFEITO e pressione ENTRE\n027- fulano - PPP\n414- Beltrando - PRF\n687- Sicrano - PSB\n000- Voto nulo\n");
          scanf("%i",&voto_prefeito);
 
-        //Contabilizar votos para prefeito 
-        switch(voto_prefeito){
+         if (voto_prefeito==999)
+         {
+           break;
+         }
+         
+         {
 
-            case 999:
-            printf("\n\t\tVotacao para PREFEITO ENCERRADA\n");
-            break;
-            
-            case 027:
-            printf("\n027- fulano - PPP\n");
-            printf("C - para confirmar ou D - para corrigir\n");
-            scanf("%s",&confirmarVoto);
+             printf("C - para confirmar ou D - para corrigir\n");
+             scanf("%s",&confirmarVoto); 
+
+         } while ((confirmarVoto != 'c' && confirmarVoto != 'C') && (confirmarVoto != 'd' && confirmarVoto != 'D'));
+
+         if (confirmarVoto == 'd' && 'D')
+         {
+             printf("Voto corrigido com sucesso");
+         }else if (confirmarVoto == 'c' || 'C'){
+             printf("Voto confirmado com sucesso");
+         }
+         
+         
+
+        //Contabilizar votos para prefeito 
+            switch(voto_prefeito){
+
+                case 999:
+                printf("\n\t\tVotacao para PREFEITO ENCERRADA\n");
+                break;
+                
+                case 027:
+                    if(confirmarVoto =='c'||'C')
+                        {
+                            candidato_prefeito1 = candidato_prefeito1 + 1;
+                        
+                        }
+                break;
+                
+                case 414:
                 if(confirmarVoto=='c'||'C')
                     {
-                        candidato_prefeito1 = candidato_prefeito1 + 1;
-                        printf("VOTO PARA VEREADOR CONFIRMADO!\n");
+                        candidato_prefeito2 = candidato_prefeito2 + 1 ;
+                        
                     }
-            break;
-            
-            case 414:
-            printf("\n414- Beltrano - PRF\n");
-            printf("C - para confirmar ou D - para corrigir\n");
-            scanf("%s",&confirmarVoto);
-            if(confirmarVoto=='c'||'C')
-                {
-                    candidato_prefeito2 = candidato_prefeito2 + 1 ;
-                    printf("VOTO PARA VEREADOR CONFIRMADO!\n");
-                }
-            break;
-            
-            case 687:
-            printf("\n687- Sicrano - PSB\n");
-            printf("C - para confirmar ou D - para corrigir\n");
-            scanf("%s",&confirmarVoto);
-            if(confirmarVoto=='c'||'C')
-                {
-                    candidato_prefeito3 = candidato_prefeito3 + 1;
-                    printf("VOTO PARA VEREADOR CONFIRMADO!\n");
-                }
-            break;
-            
-            case 000:
-            printf("\n000- Voto nulo\n");
-            printf("C - para confirmar ou D - para corrigir\n");
-            scanf("%s",&confirmarVoto);
-            if(confirmarVoto =='c'||'C')
-                {
-                    voto_nuloPrefeito = voto_nuloPrefeito + 1;
-                }
-            break;
+                break;
+                
+                case 687:
+                if(confirmarVoto=='c'||'C')
+                    {
+                        candidato_prefeito3 = candidato_prefeito3 + 1;
+                    }
+                break;
+                
+                case 000:
+                if(confirmarVoto =='c'||'C')
+                    {
+                        voto_nuloPrefeito = voto_nuloPrefeito + 1;
+                    }
+                break;
 
 
-            default:
-                printf("Numero candidato INVALIDO!!");
-            break;
-            
-            
-        }
-      
+                default:
+                    printf("Numero candidato INVALIDO!!\nDigite o numero correto");
+                break;
+                
+                
+            }
+              
+        } while ( (confirmarVoto != 'c' && confirmarVoto != 'C') || (voto_prefeito=! 999 && 027 && 414 && 687 &&000 ) );
+
+
         printf("--------------------------------------------------------------------------------");
         
         //Opções para vereador
@@ -141,7 +155,7 @@ char confirmarVoto;
         
         printf("--------------------------------------------------------------------------------\n\n");
 
-    } while (voto_vereador=!999);
+    } while (voto_prefeito=!999);
 
 //Resultado para prefeito
 printf("\n      ----------APURACAO DE VOTOS PARA PREFEITO----------\n\n\t\tPREFEITOS\t\tVOTOS\n\t\tFulano\t\t\t  %i\n\t\tBeltrando\t\t  %i\n\t\tSicrando\t\t  %i\n\t\tVotos nulos\t\t  %i\n",candidato_prefeito1, candidato_prefeito2, candidato_prefeito3, voto_nuloPrefeito);
