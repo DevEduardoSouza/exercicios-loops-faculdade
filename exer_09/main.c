@@ -19,8 +19,19 @@ int main(void) {
     scanf("%i",&idade);
     printf("Digite seu indentificador\n");
     scanf("%i",&inden);
+
+    do
+    {
     printf("Sua opiniao em relacao a peca(de 0 a 10)\n");
     scanf("%i",&notaPeca);
+    if (notaPeca > 10 || notaPeca < 0 )
+    {
+      printf("Nota Informada Invalida\n");
+    }
+    
+    } while (notaPeca > 10 || notaPeca < 0 );
+ 
+
     printf("\n");
 
     if (idade >= idVelha) // indentificador da idade mais velha e idade mais velha
