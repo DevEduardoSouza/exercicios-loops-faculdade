@@ -8,6 +8,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+
+
 int main()
 {
     int idade, cor_cabelos, morenos=0, louros=0, totalMulher=0;
@@ -20,17 +23,31 @@ int main()
       printf("\nInforme a idade\n");
       scanf("%i",&idade);
 
-      //encerrar o programa aqui se o usuario digitar -1
-      if (idade == -1)
+      //encerrar o programa aqui se o usuario digitarum numero negativo
+      if (idade < 0)
       {
         break;
       }
-      
-      printf("Digite o sexo m,M ou f,F\n");
-      scanf ("%s",&sexo);
 
-      printf("Escolha a opcao da cor dos cabelos\n1 - Louros\n2 - Castanhos\n3 - pretos\n ");
-      scanf("%i",&cor_cabelos);
+      do//sair do loop ate que for infornado o sexo valido
+      {
+
+          printf("Digite o sexo m,M ou f,F\n");
+          scanf ("%s",&sexo);
+  
+      } while (sexo != 'm' && sexo != 'M' && sexo != 'f' && sexo != 'F');
+
+      do//sair do loop até que for infornado o opcao valida
+      {
+
+        printf("Escolha a opcao da cor dos cabelos\n1 - Louros\n2 - Castanhos\n3 - pretos\n ");
+        scanf("%i",&cor_cabelos);
+        if (cor_cabelos > 3)
+        {
+          printf("Opcao invalida.....\n");
+        }
+      
+      } while (cor_cabelos > 3 );
 
 
       //Verificar a cor dos cabelos, idade e contabilizar.
