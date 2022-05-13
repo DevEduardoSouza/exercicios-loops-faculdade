@@ -12,7 +12,7 @@ int main()
     int cont=1;
     char nome[30],nomeVelho[30],nomeNovo[30];
     
-    while  ( cont <= 4)
+    while  ( cont <= 10)
     {
         printf("\nNome do funcionario\n");
         scanf("%s",&nome);
