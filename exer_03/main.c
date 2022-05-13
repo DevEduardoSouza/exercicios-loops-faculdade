@@ -10,8 +10,13 @@ int main() {
     // Recolher dados dos funcionarios
     printf("\nNome  do funcionario\n");
     scanf (" %256[^\n]", &nome);
+
+    do//sair do loop ate que for infornado o sexo valido
+    {
     printf("\nSexo do funcionaro(m, M ou f, F)\n");
     scanf(" %c",&sexo);
+    } while (sexo != 'm' && sexo != 'M' && sexo != 'f' && sexo != 'F');
+
     printf("\nPeso do funcionario (em KG: exemplo 75.62)\n");
     scanf(" %f",&peso);
     printf("\nAltura do funcionario (metros: exemplo 1.80)\n"); 
