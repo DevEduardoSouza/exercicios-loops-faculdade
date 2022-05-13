@@ -6,18 +6,12 @@
 
 */
 
-//função principal
 int main()
 {
-    int temp  ,
-        mes   =0,
-        novo  =0,
-        velho =0;
-    char nome[30],nomeVelho[30],nomeNovo[30];
+    int temp, novo=0, velho=0;
     int cont=1;
-
-      
-
+    char nome[30],nomeVelho[30],nomeNovo[30];
+    
     while  ( cont <= 4)
     {
         printf("\nNome do funcionario\n");
@@ -30,19 +24,18 @@ int main()
         velho = temp;
         novo = velho;
        }
-         if (temp > velho)
+        if (temp > velho)
         {
             velho=temp;
             strcpy(nomeVelho,nome);
         }
-         else if (novo < velho)
+        if (temp < novo )
         {
            novo=temp; 
            strcpy(nomeNovo,nome);
         }
-        cont++;
-        
-        
+        ++cont;
+         
     }    
     printf("\nfuncionario mais velho na empresa: %s com %i meses",nomeVelho,velho);
     printf("\nfuncionario mais novo na empresa: %s com %i meses",nomeNovo,novo);
