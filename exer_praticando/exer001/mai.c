@@ -4,7 +4,7 @@
 /*
 Escreva um programa em C para converter um número decimal em binário.
 */
-#include<stdio.h>
+
 
 int main()
 {
