@@ -27,21 +27,12 @@ char confirmarVoto;
            break;
          }
          
+         do
          {
-
              printf("C - para confirmar ou D - para corrigir\n");
              scanf("%s",&confirmarVoto); 
-
          } while ((confirmarVoto != 'c' && confirmarVoto != 'C') && (confirmarVoto != 'd' && confirmarVoto != 'D'));
 
-         if (confirmarVoto == 'd' && 'D')
-         {
-             printf("Voto corrigido com sucesso");
-         }else if (confirmarVoto == 'c' || 'C'){
-             printf("Voto confirmado com sucesso");
-         }
-         
-         
 
         //Contabilizar votos para prefeito 
             switch(voto_prefeito){
@@ -88,7 +79,7 @@ char confirmarVoto;
                 
             }
               
-        } while ( (confirmarVoto != 'c' && confirmarVoto != 'C') || (voto_prefeito=! 999 && 027 && 414 && 687 &&000 ) );
+        } while ( voto_prefeito=! 999 && 027 && 414 && 687 &&000 );
 
 
         printf("--------------------------------------------------------------------------------");
