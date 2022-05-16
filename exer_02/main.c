@@ -8,9 +8,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
-
 int main()
 {
     int idade, cor_cabelos, morenos=0, louros=0, totalMulher=0;
@@ -48,7 +45,6 @@ int main()
         }
       
       } while (cor_cabelos > 3 );
-
 
       //Verificar a cor dos cabelos, idade e contabilizar.
       switch (cor_cabelos)
@@ -110,7 +106,6 @@ int main()
     procentagemCabelos = (100.0 * morenos) / totalMulher;
     printf("\nPorcentagem das mulheres entre 18 e 35 anos, morenas: %.2f%%",procentagemCabelos);
     
-
     return 0;
 }
 

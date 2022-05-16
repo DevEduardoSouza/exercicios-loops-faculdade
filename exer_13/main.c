@@ -15,23 +15,17 @@ char confirmarVoto;
     do//permanecer no loop até que seja informado 999
     {
 
-        do
-        {
+        
         
         //Imprimir as opcoes disponiveis para prefeito
          printf("\n\nDigite o numero do seu candidato para PREFEITO e pressione ENTRE\n027- fulano - PPP\n414- Beltrando - PRF\n687- Sicrano - PSB\n000- Voto nulo\n");
          scanf("%i",&voto_prefeito);
 
-         if (voto_prefeito==999)
-         {
-           break;
-         }
          
-         do
-         {
+         
              printf("C - para confirmar ou D - para corrigir\n");
              scanf("%s",&confirmarVoto); 
-         } while ((confirmarVoto != 'c' && confirmarVoto != 'C') && (confirmarVoto != 'd' && confirmarVoto != 'D'));
+        
 
 
         //Contabilizar votos para prefeito 
@@ -79,7 +73,7 @@ char confirmarVoto;
                 
             }
               
-        } while ( voto_prefeito=! 999 && 027 && 414 && 687 &&000 );
+        
 
 
         printf("--------------------------------------------------------------------------------");
